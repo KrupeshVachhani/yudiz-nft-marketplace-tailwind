@@ -2,7 +2,7 @@ import React from 'react';
 
 const TrendingCard = ({ mainImage, secondaryImages, extraCount, collectionName, userImage, userName }) => {
   return (
-    <section className="w-full max-w-[400px] mx-auto">
+    <section className="w-full max-w-[400px] mx-auto font-work">
       <div className="w-full flex flex-col gap-2.5">
         {/* Main Image */}
         <img 
@@ -23,7 +23,7 @@ const TrendingCard = ({ mainImage, secondaryImages, extraCount, collectionName, 
           ))}
           
           {/* Extra Count Placeholder */}
-          <div className="w-[calc(33.333%-7px)] rounded-xl bg-[#A259FF] text-white flex justify-center items-center text-base font-bold transform transition-all duration-300 ease-in-out hover:-translate-y-[3px] hover:cursor-pointer">
+          <div className="w-[calc(33.333%-7px)] font-mono rounded-xl bg-[#A259FF] text-white flex justify-center items-center text-base font-bold transform transition-all duration-300 ease-in-out hover:-translate-y-[3px] hover:cursor-pointer">
             {extraCount}+
           </div>
         </div>

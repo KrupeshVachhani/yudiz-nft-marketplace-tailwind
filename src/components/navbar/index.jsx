@@ -20,8 +20,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#2B2B2B] sticky top-0 w-full z-50 shadow-lg">
-      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-2">
+    <nav className="font-work bg-[#2B2B2B] sticky top-0 w-full z-50 shadow-lg">
+      <div className="container mx-auto flex items-center justify-between px-2 sm:px-2 py-3 sm:py-2">
         {/* Logo */}
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="w-40 cursor-pointer" />
@@ -66,7 +66,7 @@ const Navbar = () => {
             <li className="mt-4 md:mt-0">
               <button
                 onClick={closeMenu}
-                className="bg-[#A259FF] text-white text-sm sm:text-base px-4 sm:px-6 py-2 rounded-xl hover:bg-purple-700"
+                className=" font-semibold bg-[#A259FF] text-white text-sm sm:text-base px-4 sm:px-6 py-2 rounded-xl hover:bg-purple-700"
               >
                 Sign Up
               </button>

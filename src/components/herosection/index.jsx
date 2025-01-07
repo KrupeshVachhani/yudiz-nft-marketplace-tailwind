@@ -17,7 +17,7 @@ const Index = () => {
   ];
 
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between gap-3 px-6 py-8 bg-[#2B2B2B] text-white max-w-6xl mx-auto">
+    <section className="container max-w-[1400px] flex flex-col lg:flex-row items-center justify-between font-work gap-3 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 bg-[#2B2B2B] text-white mx-auto">
       {/* Left Content */}
       <div className="flex flex-col gap-6 max-w-lg">
         <div className="text-center lg:text-left">
@@ -37,7 +37,7 @@ const Index = () => {
         <div className="flex justify-center lg:justify-start gap-6 mt-6">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <span className="text-xl font-bold block">
+              <span className="text-xl font-bold block font-mono">
                 {isVisible && (
                   <CountUp
                     start={0}
