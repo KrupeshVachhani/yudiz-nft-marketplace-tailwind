@@ -5,6 +5,7 @@ import nftImg from "../../assets/Image_Placeholder.png";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -17,7 +18,7 @@ const Index = () => {
   ];
 
   return (
-    <section className="container max-w-[1400px] flex flex-col lg:flex-row items-center justify-between font-work gap-3 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 bg-[#2B2B2B] text-white mx-auto">
+    <section className="container max-w-[1400px] flex flex-col lg:flex-row items-center justify-between font-work gap-3 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 text-white mx-auto">
       {/* Left Content */}
       <div className="flex flex-col gap-6 max-w-lg">
         <div className="text-center lg:text-left">
@@ -56,11 +57,24 @@ const Index = () => {
       {/* Right Content */}
       <div className="max-w-sm w-full lg:max-w-md">
         <div className="bg-[#2B2B2B] rounded-lg shadow-lg overflow-hidden">
-          <img
-            src={nftImg}
-            alt="NFT Art"
-            className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 hover:cursor-pointer"
-          />
+          {/* Image Wrapper with Placeholder */}
+          <div className="relative bg-black rounded-t-lg">
+            <div
+              className={`w-full h-64 flex items-center justify-center bg-gray-700 rounded-t-lg ${
+                isImageLoaded ? "hidden" : ""
+              }`}
+            >
+              <span className="text-gray-400">image</span>
+            </div>
+            <img
+              src={nftImg}
+              alt="NFT Art"
+              className={`w-full h-auto object-cover border-2 border-gray-700 rounded-t-lg transition-transform duration-300 hover:scale-105 hover:cursor-pointer ${
+                isImageLoaded ? "block" : "hidden"
+              }`}
+              onLoad={() => setIsImageLoaded(true)}
+            />
+          </div>
           <div className="p-4 flex flex-col gap-4">
             <h3 className="text-lg font-bold text-white">Space Walking</h3>
             <div className="flex items-center gap-3">

@@ -18,8 +18,14 @@ const Index = () => {
         </div>
 
         <div className="group">
-          <button className="mx-auto my-5 md:mx-0 border rounded-2xl border-[#a259ff] group-hover:border-[#7e22ce] flex justify-center items-center px-5 py-4">
-            <img src={rocketBtn} alt="Rocket Icon" className="h-6 w-6" />
+          <button className="mx-auto my-5 md:mx-0 border rounded-2xl border-[#a259ff] group-hover:border-[#7e22ce] flex justify-center items-center px-5 py-4 transition-colors duration-300">
+            <div className="relative w-6 h-6">
+              <img
+                src={rocketBtn}
+                alt="Rocket Icon"
+                className="h-full w-full object-contain"
+              />
+            </div>
             <span className="text-white ml-3 font-semibold">
               View Rankings
             </span>
